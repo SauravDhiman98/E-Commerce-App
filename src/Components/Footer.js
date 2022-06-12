@@ -2,13 +2,14 @@ import styled from 'styled-components'
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
-
-
+import HomeIcon from '@mui/icons-material/Home';
+import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
+import EmailIcon from '@mui/icons-material/Email';
 const Footer = () => {
   return (
     <Container>
          <Left>
-          <Logo>LAMA...</Logo>
+          <Logo>Market Fever</Logo>
           <Desc>It's been said that 'thoughts are like things'... that they actually contain dynamic power.
              Have you ever thought about thoughts like that?
               Whether or not you believe this,
@@ -46,11 +47,21 @@ const Footer = () => {
          <Right>
           <Title>Contact</Title>
           <ContactItems>
-            +91 923012****
+            <HomeIcon style={{color: "#391306", fontSize:"30px"}}/>
+          Contact Address: Postmaster,
+           Agra City S.O, Agra, Uttar Pradesh, India (IN), 
+           Pin Code:-282003
+
           </ContactItems>
           <ContactItems>
+            <PhoneIphoneIcon style={{color: "#391306", fontSize:"30px"}}/>
+             +91 923012****
+          </ContactItems>
+          <ContactItems>
+            <EmailIcon style={{color: "#391306", fontSize:"30px"}}/>
             Contact@marketNuro.ac.in
             </ContactItems> 
+
          </Right>
     </Container>
   )
@@ -75,6 +86,7 @@ const Center = styled.div`
 `
 const Title = styled.h3`
  margin-bottom: 30px;
+ color: #391306;
 `
 const List = styled.ul`
  margin: 0;
@@ -96,7 +108,7 @@ const Right  = styled.div`
 `
 
 const Logo = styled.h1`
-
+color:#391306;
 `
 
 const Desc = styled.p`
@@ -123,4 +135,8 @@ margin-right:20px ;
 
 const ContactItems = styled.div`
 color: #D48C70;
+padding: 10px;
+display: flex;
+justify-content: flex-start;
+
 `
