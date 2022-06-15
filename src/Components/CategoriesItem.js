@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-
+import { mobileDevice } from '../Responsive'
 const CategoriesItem = ({item}) => {
   return (
     <Container>
@@ -24,6 +24,9 @@ const Img = styled.img`
 width:100% ;
 height:100% ;
 object-fit:cover ;
+${mobileDevice({
+   height:"20vh"
+  })}
 `
 const Info = styled.div`
 position: absolute ;

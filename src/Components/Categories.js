@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import  {categoryArray}  from '../Pages/data'
 import CategoriesItem from './CategoriesItem'
+import { mobileDevice } from '../Responsive'
 const Categories = () => {
 
 
@@ -22,4 +23,8 @@ const Container = styled.div`
 display: flex;
 padding: 20px;
 justify-content:space-between;
+${mobileDevice({
+   padding: "0px",
+   flexDirection: "column"
+  })}
 `

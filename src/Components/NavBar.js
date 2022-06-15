@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import SearchIcon from '@mui/icons-material/Search';
 import Badge from '@mui/material/Badge';
 import ShoppingCartTwoToneIcon from '@mui/icons-material/ShoppingCartTwoTone';
-
+import { mobileDevice } from '../Responsive';
 const NavBar = () => {
   return (
     <Container>
@@ -23,7 +23,7 @@ const NavBar = () => {
           </Left>
           <Center>
             <Logo>
-              LAMA..
+              Market Fever
             </Logo>
           </Center>
           <Right>
@@ -53,6 +53,10 @@ const Wrapper = styled.div`
  display:flex;
  align-items: center;
  justify-content: space-between;
+
+ ${mobileDevice({
+    padding: "10px 0px"
+  })}
 `
 
 const Left = styled.div`
@@ -64,6 +68,9 @@ const Left = styled.div`
  const Language = styled.div`
   font-size:14px;
   cursor: pointer; 
+  ${mobileDevice({
+    display: "none"
+  })}
  `
 const Center = styled.div`
  flex:1;
@@ -72,6 +79,9 @@ const Center = styled.div`
 const Logo = styled.h1`
  font-weight: bold;
  text-align: center;
+ ${mobileDevice({
+    fontSize: "20px"
+  })}
 `
 
 const Right = styled.div`
@@ -79,12 +89,20 @@ flex:1;
 display: flex;
 align-items: center;
 justify-content: flex-end;
+${mobileDevice({
+    justifyContent: "center",
+    flex:"2"
+  })}
 `
 
 const MenuItems = styled.div`
  font-size: 14px;
  cursor: pointer;
  margin-left: 25px;
+ ${mobileDevice({
+    fontSize: "12px",
+    marginLeft: "10px"
+  })}
 `
 
 const SearchBar = styled.div`
@@ -97,4 +115,7 @@ const SearchBar = styled.div`
 
 const Input = styled.input`
  border: none;
+ ${mobileDevice({
+    width: "50px"
+  })}
 `

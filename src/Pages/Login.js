@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-
+import { mobileDevice } from '../Responsive'
 const Login = () => {
   return (
     <Container>
@@ -31,6 +31,7 @@ const Container = styled.div`
   display: flex;
   align-items:center ;
   justify-content:center;
+
 `
 // background-color: #ff4e00;
 // #FEDE00
@@ -40,7 +41,9 @@ const Wrapper = styled.div`
  padding: 20px;
  width: 40%;
  background: rgba(121, 94, 59, .8) ;
-
+ ${mobileDevice({
+    width: "75%"
+  })}
 `
 
 const Title = styled.h1`

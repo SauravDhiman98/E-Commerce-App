@@ -1,5 +1,5 @@
 import styled  from 'styled-components'
-
+import { mobileDevice } from '../Responsive'
 
 const Register = () => {
   return (
@@ -41,6 +41,10 @@ const Wrapper = styled.div`
  width: 40%;
  background-image: linear-gradient(135deg, #de2b38 85%, white 10%);
  margin-right:700px ;
+ 
+ ${mobileDevice({
+    width: "20%"
+  })}
 `
 
 const Title = styled.h1`

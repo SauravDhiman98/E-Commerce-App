@@ -5,6 +5,8 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import HomeIcon from '@mui/icons-material/Home';
 import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
 import EmailIcon from '@mui/icons-material/Email';
+import { mobileDevice } from '../Responsive';
+
 const Footer = () => {
   return (
     <Container>
@@ -72,6 +74,9 @@ export default Footer
 const Container = styled.div`
 display: flex;
 background-color: #F9F1F0 ;
+${mobileDevice({
+    flexDirection: "column"
+  })}
 `
 
 const Left = styled.div`
@@ -83,6 +88,9 @@ padding: 20px;
 const Center = styled.div`
  flex:1 ;
  padding: 20px;
+ ${mobileDevice({
+    display: "none"
+  })}
 `
 const Title = styled.h3`
  margin-bottom: 30px;
@@ -105,6 +113,9 @@ const ListItem = styled.li`
 const Right  = styled.div`
  flex:1 ;
  padding: 20px;
+ ${mobileDevice({
+    backgroundColor: "#fff8f8"
+  })}
 `
 
 const Logo = styled.h1`

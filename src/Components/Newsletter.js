@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import SendIcon from '@mui/icons-material/Send';
+import { mobileDevice } from '../Responsive';
 const Newsletter = () => {
   return (
     <Container>
@@ -31,12 +32,19 @@ const Container = styled.div`
 const Title= styled.h1`
  font-size:70px;
  margin-bottom:20px;
+ ${mobileDevice({
+    fontSize:"35px"
+  })}
 `
 
 const Description = styled.div`
   font-size:24px ;
   font-weight: 300;
   margin-bottom: 20px;
+  ${mobileDevice({
+    textAlign: "center",
+    fontSize: "20px"
+  })}
 `
 
 const InputContainer = styled.div`
@@ -46,6 +54,9 @@ const InputContainer = styled.div`
   display: flex;
   justify-content: space-between;
   border: 1px solid lightgray ;
+  ${mobileDevice({
+   width:"80%"
+  })}
 `
 
 
